@@ -6,3 +6,6 @@ class APIClient:
 
     def get(self, endpoint):
         return requests.get(f"{self.base_url}{endpoint}")
+
+    def post(self, endpoint, data):
+        return requests.post(f"{self.base_url}{endpoint}", json=data)
